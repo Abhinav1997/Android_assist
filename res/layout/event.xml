@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="OK" />
+
+    <EditText
+        android:id="@+id/ins"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/button"
+        android:ems="10" />
+
+    <ListView
+        android:id="@+id/list_eve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/add_new"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ins"
+        android:layout_alignBottom="@+id/ins"
+        android:layout_toLeftOf="@+id/ins"
+        android:text="Add new Event" />
+
+</RelativeLayout>
