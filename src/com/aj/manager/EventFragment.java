@@ -24,22 +24,15 @@ public class EventFragment extends Fragment{
 	private ArrayList<String> list;
 	
 	ArrayAdapter<String> adapter;
-	/*String[] items = new String[] {"Office",
-									"College",
-									"Night",
-									"Travelling",
-									"Meeting"
-	};*/
-	
+
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState){
 		View myFragmentView = inflater.inflate(R.layout.event,container,false);
-		list = new ArrayList<String>();
-		list.add("Day");
-		list.add("Meeting");
-		list.add("College");
-		list.add("Night");
+		
+		if(list==null)
+			list_init();
+		
 		listview = (ListView)myFragmentView.findViewById(R.id.list_eve);
 		adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,list);
 		listview.setAdapter(adapter);
@@ -57,11 +50,17 @@ button.setOnClickListener(new OnClickListener() {
 			}
 		});
         
-		return myFragmentView; 
+		return myFragmentView; 		
 		
+	}
+	
+	private void list_init(){
 		
-		
-		
+		list = new ArrayList<String>();
+		list.add("Day");
+		list.add("Meeting");
+		list.add("College");
+		list.add("Night");
 	}
 }
 	
